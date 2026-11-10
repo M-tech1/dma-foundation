@@ -13,7 +13,7 @@
     "@fontsource-variable/open-sans": "^5.2.5",
     "@fontsource/playfair-display": "^5.2.5",
     "framer-motion": "^11.18.2",
-    "next": "15.3.3",
+    "next": "^15.5.29",
     "react": "19.1.0",
     "react-dom": "19.1.0"
   },
