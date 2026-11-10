@@ -1,4 +1,3 @@
-import { SHOW_PLACEHOLDERS } from "@/lib/content";
 import ScrollProgress from "@/components/ScrollProgress";
 import UrgentBar from "@/components/UrgentBar";
 import Nav from "@/components/Nav";
@@ -39,7 +38,6 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
-      {SHOW_PLACEHOLDERS && <div className="draft" role="note"><i aria-hidden="true" />Draft · placeholders highlighted</div>}
     </>
   );
 }
