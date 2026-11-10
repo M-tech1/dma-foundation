@@ -107,16 +107,19 @@ export type TeamMember = { name: string; role: string; bio?: string; photo?: str
 
 export const team: { title: string; lede: string; members: TeamMember[] } = {
   title: "The people guiding our work",
-  lede: "Our founder and board of trustees bring leadership, public service and community experience to one shared belief: every person deserves dignity, professional care and a real chance to recover.",
+  lede: "Our founder, board of trustees and advisory board bring leadership, public service and community experience to one shared belief: every person deserves dignity, professional care and a real chance to recover.",
   members: [
     { name: "Dr. Mohammed Audu", role: "Founder", photo: "/brand/CEO.png" },
+    { name: "Dr. Kassim Mohammed", role: "Acting Country Rep", photo: "/images/team/kassim-mohammed.jpg" },
     { name: "HRH Esu Pharm. Luka Baba Panya", role: "Chairman", photo: "/images/team/luka-baba-panya.jpg" },
     { name: "H.E. Amb. Francisco Edu Mangue", role: "Vice Chairman", photo: "/images/team/francisco-edu-mangue.jpg" },
     { name: "Engr. Yakubu Audu Akor", role: "Trustee", photo: "/images/team/yakubu-audu-akor.jpg" },
     { name: "Mrs. Ronke Obanaiye-Audu", role: "Trustee", photo: "/images/team/ronke-obanaiye-audu.jpg" },
     { name: "Mr. Ibrahim Isiaka", role: "Trustee", photo: "/images/team/ibrahim-isiaka.jpg" },
     { name: "Dr. Saadatu Adamu", role: "Trustee", photo: "/images/team/saadatu-adamu.jpg" },
-    { name: "Dr. Kassim Mohammed", role: "Acting Country Rep", photo: "/images/team/kassim-mohammed.jpg" },
+    { name: "Dr. Mrs. Rose Omo Orianra Anthony", role: "Advisory Board Chairperson", photo: "/images/team/rose-omo-orianra-anthony.jpg" },
+    { name: "Mrs. Oghogho Gwabin Musa", role: "Vice Chairperson, Advisory Board", photo: "/images/team/oghogho-gwabin-musa.jpg" },
+    { name: "Mrs. Rejoice Wesley", role: "Principal Advisory Board Member", photo: "/images/team/rejoice-wesley.jpg" },
   ],
 };
 
@@ -250,4 +253,5 @@ export const partners = [
   { short: "FMoH", name: "Federal Ministry of Health and Social Welfare", logo: "/partners/ministry-of-health.jpg" },
   { short: "NAPTIP", name: "National Agency for the Prohibition of Trafficking in Persons", logo: "/partners/naptip.jpg" },
   { short: "MitCrux", name: "MitCrux Limited", logo: "/partners/mitcrux.png" },
+  { short: "ISSUP", name: "International Society of Substance Use Professionals, Nigeria", logo: "/partners/issup.jpg" },
 ];
