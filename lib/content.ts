@@ -16,7 +16,8 @@ export const SHOW_PLACEHOLDERS = true;
 export const PLACEHOLDER_PHOTOS = true;
 
 /** Stand-in nature/landscape photos until the centre's own consented photos arrive. */
-const ph = (id: number, w = 1200, h = 900) => `https://picsum.photos/id/${id}/${w}/${h}`;
+const ph = (id: number, w = 1200, h = 900) =>
+  `https://picsum.photos/id/${id}/${w}/${h}`;
 
 export const site = {
   shortName: "DMA Foundation",
@@ -31,10 +32,16 @@ export const contact = {
   address: "Adon-Kasa, New Karu, Nasarawa State, Nigeria",
   phoneDisplay: "0913 125 2197",
   phoneIntl: "+2349131252197",
-  whatsapp: "https://wa.me/2349131252197?text=" + encodeURIComponent("Hello DMA Foundation, I would like to speak with someone confidentially."),
+  whatsapp:
+    "https://wa.me/2349131252197?text=" +
+    encodeURIComponent(
+      "Hello DMA Foundation, I would like to speak with someone confidentially.",
+    ),
   email: "dmafoundation01@gmail.com",
   hours: "[[Mon – Sat, 8am – 6pm · WhatsApp replies within 24 hours]]",
-  map: "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent("Adon-Kasa, New Karu, Nasarawa State, Nigeria"),
+  map:
+    "https://www.google.com/maps/search/?api=1&query=" +
+    encodeURIComponent("Adon-Kasa, New Karu, Nasarawa State, Nigeria"),
 };
 
 /** Rooted at "/" so the links also work from /blog and /privacy. */
@@ -51,11 +58,15 @@ export const hero = {
   eyebrow: "Rehabilitation & mental health care · New Karu",
   titleLead: "Hope restored.",
   titleAccent: "Lives rebuilt.",
-  lede:
-    "We help people overcome substance use and mental health challenges through evidence-based prevention, treatment and recovery care, and we support their families every step of the way.",
+  lede: "We help people overcome substance use and mental health challenges through evidence-based prevention, treatment and recovery care, and we support their families every step of the way.",
   image: "/images/hero-family.png",
-  imageAlt: "A smiling young man with arms open wide, surrounded by his supportive family at sunrise",
-  assurances: ["Completely confidential", "Evidence-based care", "Family support"],
+  imageAlt:
+    "A smiling young man with arms open wide, surrounded by his supportive family at sunrise",
+  assurances: [
+    "Completely confidential",
+    "Evidence-based care",
+    "Family support",
+  ],
 };
 
 export const essence = [
@@ -76,7 +87,7 @@ export const about = {
   mission:
     "To restore lives through mental health care, addiction rehabilitation, and medical outreach, driven by compassion and professionalism. Reaching the under-reached and restoring dignity to the underserved.",
   vision:
-    "A society where every person has access to mental wellness, support systems, and a chance to heal and grow, regardless of status or location.",
+    "A society where every person has access to mental wellness, support systems, a chance to heal and grow, regardless of status or location.",
   image: "/brand/CEO.png",
   imageAlt: "Dr. Mohammed Audu, founder of the DMA Foundation",
   founder: {
@@ -103,36 +114,108 @@ export const values = [
  * staff photos to /public/images/team/ and set `photo: "/images/team/<file>.jpg"`.
  * Names, roles and bios in [[brackets]] are placeholders to confirm with the foundation.
  */
-export type TeamMember = { name: string; role: string; bio?: string; photo?: string };
+export type TeamMember = {
+  name: string;
+  role: string;
+  bio?: string;
+  photo?: string;
+};
 
 export const team: { title: string; lede: string; members: TeamMember[] } = {
   title: "The people guiding our work",
   lede: "Our founder, board of trustees and advisory board bring leadership, public service and community experience to one shared belief: every person deserves dignity, professional care and a real chance to recover.",
   members: [
     { name: "Dr. Mohammed Audu", role: "Founder", photo: "/brand/CEO.png" },
-    { name: "Dr. Kassim Mohammed", role: "Acting Country Rep", photo: "/images/team/kassim-mohammed.jpg" },
-    { name: "HRH Esu Pharm. Luka Baba Panya", role: "Chairman", photo: "/images/team/luka-baba-panya.jpg" },
-    { name: "H.E. Amb. Francisco Edu Mangue", role: "Vice Chairman", photo: "/images/team/francisco-edu-mangue.jpg" },
-    { name: "Engr. Yakubu Audu Akor", role: "Trustee", photo: "/images/team/yakubu-audu-akor.jpg" },
-    { name: "Mrs. Ronke Obanaiye-Audu", role: "Trustee", photo: "/images/team/ronke-obanaiye-audu.jpg" },
-    { name: "Mr. Ibrahim Isiaka", role: "Trustee", photo: "/images/team/ibrahim-isiaka.jpg" },
-    { name: "Dr. Saadatu Adamu", role: "Trustee", photo: "/images/team/saadatu-adamu.jpg" },
-    { name: "Dr. Mrs. Rose Omo Orianra Anthony", role: "Advisory Board Chairperson", photo: "/images/team/rose-omo-orianra-anthony.jpg" },
-    { name: "Mrs. Oghogho Gwabin Musa", role: "Vice Chairperson, Advisory Board", photo: "/images/team/oghogho-gwabin-musa.jpg" },
-    { name: "Mrs. Rejoice Wesley", role: "Principal Advisory Board Member", photo: "/images/team/rejoice-wesley.jpg" },
+    {
+      name: "HRH Esu Pharm. Luka Baba Panya",
+      role: "Chairman",
+      photo: "/images/team/luka-baba-panya.jpg",
+    },
+    {
+      name: "H.E. Amb. Francisco Edu Mangue",
+      role: "Vice Chairman",
+      photo: "/images/team/francisco-edu-mangue.jpg",
+    },
+    {
+      name: "Dr. Mrs. Rose Omo Orianra Anthony",
+      role: "Advisory Board Chairperson",
+      photo: "/images/team/rose-omo-orianra-anthony.jpg",
+    },
+    {
+      name: "Mrs. Oghogho Gwabin Musa",
+      role: "Vice Chairperson, Advisory Board",
+      photo: "/images/team/oghogho-gwabin-musa.jpg",
+    },
+    {
+      name: "Mrs. Rejoice Wesley",
+      role: "Principal Advisory Board Member",
+      photo: "/images/team/rejoice-wesley.jpg",
+    },
+    // { name: "Dr. Kassim Mohammed", role: "Acting Country Rep", photo: "/images/team/kassim-mohammed.jpg" },
+
+    {
+      name: "Engr. Yakubu Audu Akor",
+      role: "Trustee",
+      photo: "/images/team/yakubu-audu-akor.jpg",
+    },
+    {
+      name: "Mrs. Ronke Obanaiye-Audu",
+      role: "Trustee",
+      photo: "/images/team/ronke-obanaiye-audu.jpg",
+    },
+    {
+      name: "Mr. Ibrahim Isiaka",
+      role: "Trustee",
+      photo: "/images/team/ibrahim-isiaka.jpg",
+    },
+    {
+      name: "Dr. Saadatu Adamu",
+      role: "Trustee",
+      photo: "/images/team/saadatu-adamu.jpg",
+    },
   ],
 };
 
-export type ServiceIcon = "prevention" | "assessment" | "treatment" | "counselling" | "family" | "aftercare";
+export type ServiceIcon =
+  | "prevention"
+  | "assessment"
+  | "treatment"
+  | "counselling"
+  | "family"
+  | "aftercare";
 
 /** Confirm the final service list with the foundation (Brand Guidelines 10.2). */
 export const services: { icon: ServiceIcon; title: string; text: string }[] = [
-  { icon: "prevention", title: "Prevention & education", text: "Awareness talks for schools, faith groups and communities, so young people and families can spot the signs early." },
-  { icon: "assessment", title: "Confidential assessment", text: "A private conversation with a trained professional to understand what is happening and agree the right next step." },
-  { icon: "treatment", title: "Treatment & detox support", text: "Medically supervised care for people with substance use disorders, delivered safely and with dignity." },
-  { icon: "counselling", title: "Counselling & therapy", text: "One-to-one and group sessions that build coping skills and support lasting mental wellness." },
-  { icon: "family", title: "Family support", text: "Guidance and family therapy so loved ones understand recovery and know how to help." },
-  { icon: "aftercare", title: "Aftercare & reintegration", text: "Follow-up, relapse-prevention planning and help returning to work, school and community life." },
+  {
+    icon: "prevention",
+    title: "Prevention & education",
+    text: "Awareness talks for schools, faith groups and communities, so young people and families can spot the signs early.",
+  },
+  {
+    icon: "assessment",
+    title: "Confidential assessment",
+    text: "A private conversation with a trained professional to understand what is happening and agree the right next step.",
+  },
+  {
+    icon: "treatment",
+    title: "Treatment & detox support",
+    text: "Medically supervised care for people with substance use disorders, delivered safely and with dignity.",
+  },
+  {
+    icon: "counselling",
+    title: "Counselling & therapy",
+    text: "One-to-one and group sessions that build coping skills and support lasting mental wellness.",
+  },
+  {
+    icon: "family",
+    title: "Family support",
+    text: "Guidance and family therapy so loved ones understand recovery and know how to help.",
+  },
+  {
+    icon: "aftercare",
+    title: "Aftercare & reintegration",
+    text: "Follow-up, relapse-prevention planning and help returning to work, school and community life.",
+  },
 ];
 
 export const reasons = [
@@ -145,11 +228,26 @@ export const reasons = [
 ];
 
 export const journey = [
-  { title: "Reach out", text: "Call, send a WhatsApp message or book online. Everything you share is confidential." },
-  { title: "Assessment", text: "A trained professional listens and builds a care plan around the person, not the condition." },
-  { title: "Treatment", text: "Evidence-based care, from detox support to counselling, at a pace that is safe and sustainable." },
-  { title: "Recovery", text: "Therapy, family sessions and life skills that strengthen recovery day by day." },
-  { title: "Reintegration", text: "Aftercare and ongoing support as people return to work, school, family and community." },
+  {
+    title: "Reach out",
+    text: "Call, send a WhatsApp message or book online. Everything you share is confidential.",
+  },
+  {
+    title: "Assessment",
+    text: "A trained professional listens and builds a care plan around the person, not the condition.",
+  },
+  {
+    title: "Treatment",
+    text: "Evidence-based care, from detox support to counselling, at a pace that is safe and sustainable.",
+  },
+  {
+    title: "Recovery",
+    text: "Therapy, family sessions and life skills that strengthen recovery day by day.",
+  },
+  {
+    title: "Reintegration",
+    text: "Aftercare and ongoing support as people return to work, school, family and community.",
+  },
 ];
 
 export const families = {
@@ -189,19 +287,22 @@ export const families = {
 
 export const testimonials = [
   {
-    quote: "[[I came in ashamed and expecting judgement. Instead I was treated like a person. Today I am back at work and my children have their father again.]]",
-    name: "[[Ibrahim, 34]]",
-    role: "[[In recovery]]",
+    quote:
+      "I came in ashamed and expecting judgement. Instead I was treated like a person. Today I am back at work and my children have their father again.",
+    name: "Ibrahim, 34",
+    role: "In recovery",
   },
   {
-    quote: "[[They didn't just help my son. They taught our whole family how to support him without losing ourselves.]]",
-    name: "[[A mother from Mararaba]]",
-    role: "[[Family member]]",
+    quote:
+      "They didn't just help my son. They taught our whole family how to support him without losing ourselves.",
+    name: "A mother from Mararaba",
+    role: "Family member",
   },
   {
-    quote: "[[The counsellors were patient with me on my hardest days. I finally understand what I am living with, and I am managing it.]]",
-    name: "[[Grace, 27]]",
-    role: "[[Former client]]",
+    quote:
+      "The counsellors were patient with me on my hardest days. I finally understand what I am living with, and I am managing it.",
+    name: "Grace, 27",
+    role: "Former client",
   },
 ];
 
@@ -213,7 +314,11 @@ export const booking = {
   lede: "Tell us how to reach you and when suits you. A member of our team will call or message you privately to confirm.",
   who: ["For myself", "For a loved one"],
   contactBy: ["Phone call", "WhatsApp", "Email"],
-  times: ["Morning (8am – 12pm)", "Afternoon (12pm – 4pm)", "Evening (4pm – 6pm)"],
+  times: [
+    "Morning (8am – 12pm)",
+    "Afternoon (12pm – 4pm)",
+    "Evening (4pm – 6pm)",
+  ],
   privacy:
     "We only ask for what we need to contact you. Your details are kept private, never shared, and handled in line with the NDPA 2023.",
 };
@@ -224,34 +329,98 @@ export type DonationIcon = "heart" | "megaphone" | "chat" | "users";
 
 export const donation = {
   causes: [
-    { icon: "heart" as DonationIcon, label: "Where most needed", note: "DMA - General", impact: "Lets us direct your gift to whatever will help most right now, from treatment places to outreach." },
-    { icon: "megaphone" as DonationIcon, label: "Prevention", note: "DMA - Prevention", impact: "Helps run awareness talks in schools, faith groups and communities, so young people and families spot the signs early." },
-    { icon: "chat" as DonationIcon, label: "Counselling & treatment", note: "DMA - Treatment", impact: "Helps someone who cannot afford care begin counselling or treatment, with dignity and confidentiality." },
-    { icon: "users" as DonationIcon, label: "Family support", note: "DMA - Family", impact: "Funds family sessions and guidance, so a household can understand recovery and heal together." },
+    {
+      icon: "heart" as DonationIcon,
+      label: "Where most needed",
+      note: "DMA - General",
+      impact:
+        "Lets us direct your gift to whatever will help most right now, from treatment places to outreach.",
+    },
+    {
+      icon: "megaphone" as DonationIcon,
+      label: "Prevention",
+      note: "DMA - Prevention",
+      impact:
+        "Helps run awareness talks in schools, faith groups and communities, so young people and families spot the signs early.",
+    },
+    {
+      icon: "chat" as DonationIcon,
+      label: "Counselling & treatment",
+      note: "DMA - Treatment",
+      impact:
+        "Helps someone who cannot afford care begin counselling or treatment, with dignity and confidentiality.",
+    },
+    {
+      icon: "users" as DonationIcon,
+      label: "Family support",
+      note: "DMA - Family",
+      impact:
+        "Funds family sessions and guidance, so a household can understand recovery and heal together.",
+    },
   ],
-  bank: {
-    bank: "Polaris Bank",
-    accountName: "Dr. Mohammed Audu Foundation",
-    accountNumber: "4029157074",
-  },
+  /** One entry per currency. The donation card shows a switch when there is more than one. */
+  banks: [
+    {
+      currency: "Naira account",
+      bank: "Polaris Bank",
+      accountName: "Dr. Mohammed Audu Foundation",
+      accountNumber: "4029157074",
+    },
+    {
+      currency: "Dollar account",
+      bank: "Polaris Bank",
+      accountName: "DMA Foundation",
+      accountNumber: "4092558190",
+    },
+  ],
 };
 
 // Leave href empty ("") to hide a network until its account is ready.
 export const socials = [
-  { label: "Facebook", href: "https://web.facebook.com/profile.php?id=61561402993401" },
+  {
+    label: "Facebook",
+    href: "https://web.facebook.com/profile.php?id=61561402993401",
+  },
   { label: "Instagram", href: "" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/company/dr-mohammed-audu-foundation/" },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/dr-mohammed-audu-foundation/",
+  },
 ];
 
 /* Our Partners slideshow. Put each logo in public/partners/ using the file name below
    (PNG or SVG with a transparent background works best). Until a file exists, the card
    shows the short name as a monogram. */
 export const partners = [
-  { short: "NDLEA", name: "National Drug Law Enforcement Agency", logo: "/partners/ndlea.png" },
-  { short: "EFCC", name: "Economic and Financial Crimes Commission", logo: "/partners/efcc.jpg" },
-  { short: "CAN", name: "Christian Association of Nigeria", logo: "/partners/can.jpg" },
-  { short: "FMoH", name: "Federal Ministry of Health and Social Welfare", logo: "/partners/ministry-of-health.jpg" },
-  { short: "NAPTIP", name: "National Agency for the Prohibition of Trafficking in Persons", logo: "/partners/naptip.jpg" },
+  {
+    short: "NDLEA",
+    name: "National Drug Law Enforcement Agency",
+    logo: "/partners/ndlea.png",
+  },
+  {
+    short: "EFCC",
+    name: "Economic and Financial Crimes Commission",
+    logo: "/partners/efcc.jpg",
+  },
+  {
+    short: "CAN",
+    name: "Christian Association of Nigeria",
+    logo: "/partners/can.jpg",
+  },
+  {
+    short: "FMoH",
+    name: "Federal Ministry of Health and Social Welfare",
+    logo: "/partners/ministry-of-health.jpg",
+  },
+  {
+    short: "NAPTIP",
+    name: "National Agency for the Prohibition of Trafficking in Persons",
+    logo: "/partners/naptip.jpg",
+  },
   { short: "MitCrux", name: "MitCrux Limited", logo: "/partners/mitcrux.png" },
-  { short: "ISSUP", name: "International Society of Substance Use Professionals, Nigeria", logo: "/partners/issup.jpg" },
+  {
+    short: "ISSUP",
+    name: "International Society of Substance Use Professionals, Nigeria",
+    logo: "/partners/issup.jpg",
+  },
 ];

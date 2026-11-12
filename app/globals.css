@@ -387,6 +387,9 @@ p { margin: 0; }
 .cause.on { color: var(--white); }
 .cause.on svg { color: var(--gold); }
 .cause-impact { min-height: 54px; padding-left: 42px; font: italic 400 17.5px/1.5 var(--quote); color: var(--forest); }
+.bank-wrap { display: grid; gap: 10px; }
+.accts { grid-template-columns: 1fr 1fr; }
+.accts .cause { justify-content: center; padding: 10px 14px; }
 .note-row { background: var(--gold-soft); border-radius: 0 0 15px 15px; }
 .give-thanks { display: grid; gap: 12px; }
 .give-thanks .btn { width: 100%; justify-content: center; }

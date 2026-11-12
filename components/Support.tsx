@@ -29,7 +29,8 @@ function CopyButton({ value, label }: { value: string; label: string }) {
 export default function Support() {
   const [pick, setPick] = useState(0);
   const cause = donation.causes[pick];
-  const { bank } = donation;
+  const [acct, setAcct] = useState(0);
+  const bank = donation.banks[acct];
   const thanks = `https://wa.me/${contact.phoneIntl.replace("+", "")}?text=${encodeURIComponent(
     `Hello DMA Foundation, I have just made a donation towards "${cause.label}". Here is my transfer receipt.`,
   )}`;
@@ -83,11 +84,26 @@ export default function Support() {
 
             <div className="give-step">
               <span className="step-no" aria-hidden="true">2</span>
-              <div className="bank">
-                <div className="bank-row"><span>Bank</span><b><T>{bank.bank}</T></b></div>
-                <div className="bank-row"><span>Account name</span><b><T>{bank.accountName}</T></b></div>
-                <div className="bank-row"><span>Account number</span><b><T>{bank.accountNumber}</T><CopyButton value={plain(bank.accountNumber)} label="account number" /></b></div>
-                <div className="bank-row note-row"><span>Transfer note</span><b>{cause.note}<CopyButton value={cause.note} label="transfer note" /></b></div>
+              <div className="bank-wrap">
+                {donation.banks.length > 1 && (
+                  <div className="causes accts" role="radiogroup" aria-label="Account to pay into">
+                    {donation.banks.map((b, i) => {
+                      const on = acct === i;
+                      return (
+                        <button key={b.currency} type="button" role="radio" aria-checked={on} className={`cause${on ? " on" : ""}`} onClick={() => setAcct(i)}>
+                          {on && <motion.span layoutId="acct-bg" className="bg" transition={{ type: "spring", stiffness: 400, damping: 34 }} />}
+                          <span>{b.currency}</span>
+                        </button>
+                      );
+                    })}
+                  </div>
+                )}
+                <div className="bank" aria-live="polite">
+                  <div className="bank-row"><span>Bank</span><b><T>{bank.bank}</T></b></div>
+                  <div className="bank-row"><span>Account name</span><b><T>{bank.accountName}</T></b></div>
+                  <div className="bank-row"><span>Account number</span><b><T>{bank.accountNumber}</T><CopyButton value={plain(bank.accountNumber)} label="account number" /></b></div>
+                  <div className="bank-row note-row"><span>Transfer note</span><b>{cause.note}<CopyButton value={cause.note} label="transfer note" /></b></div>
+                </div>
               </div>
             </div>
 
