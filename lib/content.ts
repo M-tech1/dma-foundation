@@ -334,7 +334,7 @@ export const donation = {
       label: "Where most needed",
       note: "DMA - General",
       impact:
-        "Lets us direct your gift to whatever will help most right now, from treatment places to outreach.",
+        "Together, we can prevent substance abuse, restore lives, and extend hope to vulnerable individuals and communities",
     },
     {
       icon: "megaphone" as DonationIcon,
