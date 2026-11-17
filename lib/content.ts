@@ -423,4 +423,14 @@ export const partners = [
     name: "International Society of Substance Use Professionals, Nigeria",
     logo: "/partners/issup.jpg",
   },
+  {
+    short: "GTF",
+    name: "The Grace Thomas Foundation",
+    logo: "/partners/grace-thomas.jpg",
+  },
+  {
+    short: "SOOF",
+    name: "Sunday & Omoikhere Oriaran Foundation",
+    logo: "/partners/soof.jpg",
+  },
 ];
